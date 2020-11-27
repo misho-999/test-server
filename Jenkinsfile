@@ -40,7 +40,7 @@ pipeline {
                     sshPut remote: remote,
                         from: "target/$ARTIFACT",
                         into: '/home/testServer/test'
-                    sshCommand remote: remote, command: "pm2 start test
+                    sshCommand remote: remote, command: "pm2 start test"
                 }
             }
         }
