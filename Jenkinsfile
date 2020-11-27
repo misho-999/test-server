@@ -20,7 +20,7 @@ pipeline {
                         submoduleCfg: [],
                         userRemoteConfigs: [
                             [credentialsId: "$GIT_CREDENTIALS_ID",
-                            url: 'https://github.com/misho-999/testServer/tree/master/test'
+                            url: 'https://github.com/misho-999/testServer'
                             ]]])
                 sh '$MVN_COMMAND'
             }
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     def remote = [:]
-                    remote.name = "root
+                    remote.name = "185.228.26.15"
                     remote.host = "185.228.26.15"
                     remote.port = 8080
                     remote.user = 'root'
