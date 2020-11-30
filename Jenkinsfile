@@ -39,7 +39,7 @@ pipeline {
 
 		    sshCommand remote: remote, command: "pm2 stop testServer"
                     sshPut remote: remote,
-                        from: "target/$ARTIFACT",
+                        from: "testServer/target/$ARTIFACT",
                         into: '/home/testServer/target'
                     sshCommand remote: remote, command: "pm2 start testServer"
                 }
