@@ -39,7 +39,7 @@ pipeline {
 
 					sshCommand remote: remote, 
 					command: "systemctl stop myfishing",
-                    sshPut remote: remote,
+                    sshPut remote: remote}
                     from: "testServer/target/$ARTIFACT",
                     into: '/home/testServer/target',
                     sshCommand remote: remote, 
