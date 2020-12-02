@@ -37,11 +37,8 @@ pipeline {
                     remote.logLevel = "INFO"
                     remote.knownHosts = "/etc/ssh/ssh_known_hosts"
 
-		    sshCommand remote: remote, command: "systemctl --host root@185.228.26.15 stop myfishing.service"
-                    sshPut remote: remote, 
-			from: "testServer/target/$ARTIFACT", 
-			into: '/home/testServer/target'
-                    sshCommand remote: remote, command: "ssystemctl --host root@185.228.26.15 start myfishing.service"
+		    sh 'systemctl stop myfishing'
+                    sh 'ssystemctl start myfishing'
                 }
             }
         }
