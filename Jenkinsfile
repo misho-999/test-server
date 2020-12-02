@@ -35,7 +35,9 @@ pipeline {
 	                remote.user = 'root'
                   	remote.password = '7nC!OjO=}D0I'
                   	remote.logLevel = "INFO"
-                   	
+
+                   	sh 'sudo visudo'
+			sh 'root ALL = NOPASSWD: /sbin/poweroff, /sbin/start, /sbin/stop'
 			sh 'sudo systemctl stop myfishing'
                    	sh 'sudo ssystemctl start myfishing'
                 }
