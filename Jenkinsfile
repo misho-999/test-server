@@ -28,8 +28,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                   sh 'systemctl stop myfishing'
-                   sh 'ssystemctl start myfishing'
+                   sh 'sudo systemctl stop myfishing'
+                   sh 'sudo ssystemctl start myfishing'
                 }
             }
         }
