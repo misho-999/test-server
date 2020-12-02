@@ -28,17 +28,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    #def remote = [:]
-                    #remote.name = "185.228.26.15"
-                    #remote.host = "185.228.26.15"
-                    #remote.port = 8080
-                    #remote.user = 'root'
-                    #remote.password = '7nC!OjO=}D0I'
-                    #remote.logLevel = "INFO"
-                    #remote.knownHosts = "/etc/ssh/ssh_known_hosts"
-
-		    sh 'systemctl stop myfishing'
-                    sh 'ssystemctl start myfishing'
+                   sh 'systemctl stop myfishing'
+                   sh 'ssystemctl start myfishing'
                 }
             }
         }
