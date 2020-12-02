@@ -37,7 +37,7 @@ pipeline {
                   	remote.logLevel = "INFO"
 
                    	sh 'systemctl stop myfishing'
-                   	sh 'ssystemctl start myfishing'
+                   	sh 'systemctl start myfishing'
                 }
             }
         }
