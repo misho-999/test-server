@@ -36,8 +36,8 @@ pipeline {
                   	remote.password = '7nC!OjO=}D0I'
                   	remote.logLevel = "INFO"
 
-                   	sh 'systemctl stop myfishing'
-                   	sh 'systemctl start myfishing'
+                   	sh 'sudo systemctl stop myfishing'
+                   	sh 'sudo systemctl start myfishing'
                 }
             }
         }
