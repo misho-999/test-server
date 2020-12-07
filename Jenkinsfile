@@ -33,7 +33,7 @@ pipeline {
                     	remote.host = "185.228.26.15"
                     	remote.port = 8080
 	                remote.user = 'root'
-                  	remote.password = '7nC!OjO=}D0I'
+                  	remote.password = ''
                   	remote.logLevel = "INFO"
 
                    	sh 'sudo systemctl stop myfishing'
