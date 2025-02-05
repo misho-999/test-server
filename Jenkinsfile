@@ -10,6 +10,21 @@ pipeline {
 //         ARTIFACT = "test-1.0.0-SNAPSHOT"
 //     }
     stages {
+    stage('Build') {
+                steps {
+                    sh 'mvn -B -DskipTests clean package'
+                }
+            }
+            stage('Test') { 
+                steps {
+                    sh 'mvn test' 
+                }
+                post {
+                    always {
+                        junit 'target/surefire-reports/*.xml' 
+                    }
+                }
+            }
         stage('Build') {
             steps {
                 checkout([
