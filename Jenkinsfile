@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'maven_3.8.7'
-        jdk 'java-21'
+        maven 'Apache Maven 3.8.7'
+        jdk 'java-21-openjdk-amd64'
     }
     environment {
         MVN_COMMAND = "mvn clean install -D maven.test.skip=true"
