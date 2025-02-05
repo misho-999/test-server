@@ -36,7 +36,7 @@ pipeline {
                         remote.password = ''
                         remote.logLevel = "INFO"
 
-                        sh 'sudo systemctl stop test'
+                        sh 'sudo -S systemctl stop test'
                         sh 'sudo systemctl start test'
                 }
             }
