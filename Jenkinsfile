@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'Apache Maven 3.8.7'
-        jdk 'java-21.0.5'
+        jdk 'java-21'
     }
     environment {
         MVN_COMMAND = "mvn clean install -D maven.test.skip=true"
